@@ -11,7 +11,7 @@ class Redacted < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/svn-arv/redacted/releases/download/v1.0.0/redacted_darwin_amd64.tar.gz"
-      sha256 "b6f868710dd43a1376840cd40d8db4e0e7f34753f210a3db694dbb9be930f7ec"
+      sha256 "82b730e1f35e222c8df709b925f55c3c31b215b6e019c1b77bd010b25f08662c"
 
       define_method(:install) do
         bin.install "redacted"
@@ -19,7 +19,7 @@ class Redacted < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/svn-arv/redacted/releases/download/v1.0.0/redacted_darwin_arm64.tar.gz"
-      sha256 "646dd9bd4d37a22aa86bd71d6213f21aed1fcb9888d30911a77c36af48c23940"
+      sha256 "fa628d66ef79936eb606f9bb892abd8cb900efd250b2d72103ae81c9697f8af0"
 
       define_method(:install) do
         bin.install "redacted"
@@ -30,14 +30,14 @@ class Redacted < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/svn-arv/redacted/releases/download/v1.0.0/redacted_linux_amd64.tar.gz"
-      sha256 "ce892cddc80823cae53cf08d7487a209fca0f6b197f6e2df95f3a93a91b0d4a3"
+      sha256 "9f148508e6fdebbbb98ec4b00421265429ce02a4d140a4b4264e3f7ffcb4683a"
       define_method(:install) do
         bin.install "redacted"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/svn-arv/redacted/releases/download/v1.0.0/redacted_linux_arm64.tar.gz"
-      sha256 "a6e5839a6a249a243884d5bc790187949cec1e493d2607a85a42c980165001e2"
+      sha256 "8fe454e36d1b9ed310377cd296dac10828bc4a98fcbf5431190f03a08dfb4ec7"
       define_method(:install) do
         bin.install "redacted"
       end
