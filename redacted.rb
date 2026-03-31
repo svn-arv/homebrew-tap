@@ -5,21 +5,21 @@
 class Redacted < Formula
   desc "Hook that redacts secrets from Bash tool output"
   homepage "https://github.com/svn-arv/redacted"
-  version "0.3.0"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/svn-arv/redacted/releases/download/v0.3.0/redacted_darwin_amd64.tar.gz"
-      sha256 "a0ac9125197cd8d36eb750004338dbd5ef88e602d1f7e7d4443734ec801789e4"
+      url "https://github.com/svn-arv/redacted/releases/download/v0.1.0/redacted_darwin_amd64.tar.gz"
+      sha256 "0b603839476261bfe1220f6c2730ae1e627259a5b1caa8c5e51083910d799c76"
 
       define_method(:install) do
         bin.install "redacted"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/svn-arv/redacted/releases/download/v0.3.0/redacted_darwin_arm64.tar.gz"
-      sha256 "5360d8373cf6654ca40dcbed038814104114406a4ba93e68f96f319016149b3d"
+      url "https://github.com/svn-arv/redacted/releases/download/v0.1.0/redacted_darwin_arm64.tar.gz"
+      sha256 "82edc6aea4cf13aa64e85e6a0d388451f6685e31a49d356bfb0be663d1f1605a"
 
       define_method(:install) do
         bin.install "redacted"
@@ -29,15 +29,15 @@ class Redacted < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/svn-arv/redacted/releases/download/v0.3.0/redacted_linux_amd64.tar.gz"
-      sha256 "2d4103402c1244814925cd5f0c94b8484cf536dee0af5dbaa5881fc40eb76bda"
+      url "https://github.com/svn-arv/redacted/releases/download/v0.1.0/redacted_linux_amd64.tar.gz"
+      sha256 "092bd9720b702aa659d0edb33faeda96e4b8a62bc7c830120d1fc3ce31c5f79d"
       define_method(:install) do
         bin.install "redacted"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/svn-arv/redacted/releases/download/v0.3.0/redacted_linux_arm64.tar.gz"
-      sha256 "46d479d307e63ef25aacddbfaca5b3f527840c8e2768fdff4f49b621b4661b4c"
+      url "https://github.com/svn-arv/redacted/releases/download/v0.1.0/redacted_linux_arm64.tar.gz"
+      sha256 "93b513da5de15ca36b5c854845d7e79c71b36cc1fdf0af5c1b6c52fc32db7c90"
       define_method(:install) do
         bin.install "redacted"
       end
